@@ -152,13 +152,14 @@ nav ul li a:hover::after{
 }
 
 .tab-contents ul li{
+    font-size: 15px;
     list-style: none;
     margin: 10px 0;
 }
 
 .tab-contents ul li span{
     color: #9ae7ff;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .tab-contents{
@@ -240,6 +241,7 @@ nav ul li a:hover::after{
 }
 
 .work img{
+    height: 100%;
     width: 100%;
     border-radius: 10px;
     display: block;
