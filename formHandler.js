@@ -1,4 +1,4 @@
-// Handling AJAX form submission
+// Handling form submission
 export function formHandler(e) {
     e.preventDefault();
     const msg = document.getElementById('msg');

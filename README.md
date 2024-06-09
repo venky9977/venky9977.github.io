@@ -1,6 +1,6 @@
 # Portfolio Website 
+
+I have used Vanilla JS for this project.
  
-
- For the form to google sheet setup, follow the steps in the link https://github.com/jamiewilson/form-to-google-sheets.
-
- But instead of using the code of the Google Apps Script provided in the link, use the code which is present in googleSheet.js.
+The code I have used for the "contact me form to google sheet integration" is in googleSheet.js
+I have put that code in the folder as well for you to review.
