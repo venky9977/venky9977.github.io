@@ -3,7 +3,7 @@ import Typed from 'https://cdn.skypack.dev/typed.js';
 
 export function setupTyped() {
     new Typed(".auto-type-roles", {
-        strings: ["Web Developer", "QA Engineer", "Project Manager"],
+        strings: ["Software Engineer", "QA Engineer", "Project Manager"],
         typeSpeed: 50,
         backSpeed: 50,
         loop: true
