@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
 
@@ -83,7 +83,7 @@ nav ul li a:hover::after{
 }
 
 .header-text h1 span{
-    color: #00a0d0
+    color: #00a0d0;
 }
 
 /* -----------------about--------------- */
@@ -123,7 +123,6 @@ nav ul li a:hover::after{
 }
 
 .tab-titles{
-    /* color: antiquewhite; */
     display: flex;
     margin: 20px 0 40px;
 }
@@ -218,7 +217,6 @@ nav ul li a:hover::after{
 .services-list div:hover{
     background: #00a0d0;
     transform: translateY(-10px);
-
 }
 
 /* ---------------------portfolio--------------------- */
@@ -290,8 +288,40 @@ nav ul li a:hover::after{
 }
 
 .work:hover .layer{
-   height: 100%;
+    height: 100%;
 }
+
+/* ---- Show More functionality ---- */
+
+/* hide items after the 4th by default */
+.work-list .work:nth-child(n+5) {
+    display: none;
+}
+
+/* when expanded, show all */
+.work-list.expanded .work:nth-child(n+5) {
+    display: block;
+}
+
+/* specific styling for the Show More button only */
+#show-more {
+    display: block;
+    margin: 30px auto;
+    padding: 12px 30px;
+    border: 1px solid #00a0d0;
+    background: transparent;
+    color: #00a0d0;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+#show-more:hover {
+    background: #00a0d0;
+    color: #080808;
+}
+
+/* Existing .btn styles below are untouched */
 
 .btn{
     display: block;
@@ -399,7 +429,6 @@ form .btn2{
 textarea {
     resize: none; 
 }
-  
 
 /* ----------------------------------------css for smaller screen--------------------------------------- */
 nav .fa-solid{
@@ -481,6 +510,12 @@ nav .fa-solid{
 
     .contact-left, .contact-right{
         flex-basis: 100%;
+    }
+
+    /* make portfolio a single column on very small screens */
+    .work-list {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px;
     }
 }
 

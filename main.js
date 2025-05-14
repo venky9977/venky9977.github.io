@@ -5,9 +5,9 @@ import { formHandler } from './formHandler.js';
 import { TabManager } from './TabManager.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-    const menuToggle = document.querySelector('.fa-bars');
+    const menuToggle  = document.querySelector('.fa-bars');
     const closeToggle = document.querySelector('.fa-xmark');
-    const form = document.forms['submit-to-google-sheet'];
+    const form        = document.forms['submit-to-google-sheet'];
 
     menuToggle.addEventListener('click', openMenu);
     closeToggle.addEventListener('click', closeMenu);
@@ -15,4 +15,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     new TabManager();
     setupTyped();
+
+    // ————— Show More / Show Less for portfolio —————
+    const workList    = document.querySelector('.work-list');
+    const showMoreBtn = document.getElementById('show-more');
+
+    if (workList && showMoreBtn) {
+        showMoreBtn.addEventListener('click', () => {
+            const expanded = workList.classList.toggle('expanded');
+            showMoreBtn.textContent = expanded ? 'Show Less' : 'Show More';
+        });
+    }
 });
+
+
